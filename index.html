@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+            *{margin: 0%;padding: 0%;text-decoration: none;list-style: none;font-family: 'Roboto', sans-serif;color: var(--TextColor--1);}
+            /*------ | Cores | ------ */
+            :root{
+                --TextColor--1: #ffffff;
+
+                --BackGroundColor--1:#556574;
+                --BackGroundColor--2:#1C2834;
+                --BackGroundColor--3:#475461;
+                --BackGroundColor--4:#F8693E;
+                --BackGroundColor--5:#943619;
+            }
+            body{
+                background-color: var(--BackGroundColor--2);
+            }
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                outline: none;
+                padding: 0.8rem;
+                cursor: pointer;
+                border-radius: 10rem;
+                background-color: var(--BackGroundColor--3);
+                box-shadow: 0px 2px 0px 0.2px var(--BackGroundColor--2);
+            }
+            i{
+                font-size: 1.3rem;
+                margin-left: 1px;
+            }
+            /*------ | Estilização do Página  | ------ */
+            .DivContainer{
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .MusicProduction{
+                gap: 0.7rem;
+                display: flex;
+                padding: 1rem;
+                border-radius: 1rem;
+                align-items: center;
+                flex-direction: column;
+                background-color: var(--BackGroundColor--1);
+            }
+            .TopBar ul{
+                gap: 3rem;
+                display: flex;
+                align-items: center;
+            }
+            .ImgArea{
+                width: 50%;
+                height: 20vh;
+                border-radius: 100rem;
+                background-color: var(--BackGroundColor--2);
+            }
+            .Details{
+                text-align: center;
+            }
+            .Details .MusicName{font-size: 1.3rem;}
+            .Details .AutorName{font-size: 0.8rem;}
+            .Progress{
+                width: 80%;
+                height: 8px;
+                cursor: pointer;
+                border-radius: 10rem;
+                background-color: var(--BackGroundColor--2);
+            }
+            .Progress .ProgressBar{
+                height: 8px;
+                width: 50%;
+                border-radius: inherit;
+                background-color: #F8693E;
+            }
+            .Progress .ProgressBar::before{
+                content: '';
+                
+            }
+            .Time ul{
+                gap: 10rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .Controls ul{
+                gap: 1rem;
+                display: flex;
+                align-items: center;
+            }
+        </style>
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="DivContainer">
+            <div class="MusicProduction">
+                <div class="TopBar">
+                    <ul>
+                        <li><button><i class='bx bxs-chevron-left'></i></button></li>
+                        <li><p>Playing Music</p></li>
+                        <li><button><i class='bx bx-dots-horizontal-rounded'></i></button></li>
+                    </ul>
+                </div>
+                <div class="ImgArea">
+                    <img src="" alt="">
+                </div>
+                <div class="Details">
+                    <h2 class="MusicName">Nome da Música</h2>
+                    <p class="AutorName">Nome do Autor</p>
+                </div>
+                <div class="Progress">
+                    <div class="ProgressBar">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="Time">
+                    <ul>
+                        <li><p>0:00</p></li>
+                        <li><p>0:00</p></li>
+                    </ul>
+                </div>
+                <div class="Controls">
+                    <ul>
+                        <li><button><i class='bx bx-repeat'></i></button></li>
+                        <li><button><i class='bx bx-skip-previous' ></i></button></li>
+                        <li><button style="background-color: var(--BackGroundColor--4);box-shadow: 0px 2px 0px 0.2px var(--BackGroundColor--5);"><i class='bx bx-play'></i></button></li>
+                        <li><button><i class='bx bx-skip-next' ></i></button></li>
+                        <li><button><i class='bx bxs-playlist' ></i></button></li>
+                    </ul>
+                </div>    
+            </div>     
+        </div>
+    </body>
+</html>
